@@ -1,0 +1,20 @@
+name: "On Puhs Workflows"
+
+on:
+  push:
+    paths:
+      - app/test/
+      - libraries
+      - hello.txt
+      - !my.txt
+
+jobs:
+  act-on-push-job:
+    timeout-minutes: 5
+    name: 'act on push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'hello variables'
+        run: |
+          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_REF: ${GITHUB_REF}"

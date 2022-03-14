@@ -1,12 +1,12 @@
 name: "On Puhs Workflows"
 
 on:
-  push:
-    paths:
-      - app/test/
-      - libraries
-      - hello.txt
-      - !my.txt
+  push: {}
+#    paths:
+#      - app/test/
+#      - libraries
+#      - hello.txt
+#      - !my.txt
 
 jobs:
   act-on-push-job:

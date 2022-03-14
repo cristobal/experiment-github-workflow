@@ -1,12 +1,13 @@
-name: "On Puhs Workflows"
+name: "On Push Workflows"
 
 on:
-  push: {}
-#    paths:
-#      - app/test/
-#      - libraries
-#      - hello.txt
-#      - !my.txt
+  push:
+    paths:
+      - '/app/test/**'
+      - '/hello.txt'
+    paths-ignore:
+      - '/.github/'
+
 
 jobs:
   act-on-push-job:
@@ -17,4 +18,5 @@ jobs:
       - name: 'hello variables'
         run: |
           echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"

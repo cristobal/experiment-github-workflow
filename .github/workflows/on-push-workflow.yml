@@ -3,7 +3,7 @@ name: "On Push Workflows"
 on:
   push:
     paths:
-      - '/app/test/**'
+      - 'app/test/**'
       - '/hello.txt'
 
 jobs:

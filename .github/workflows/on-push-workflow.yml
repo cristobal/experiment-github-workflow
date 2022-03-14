@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'app/test/**'
-      - 'app/other/'
+      - 'app/other/**'
       - 'hello.txt'
 
 jobs:
